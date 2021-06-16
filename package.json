@@ -1,0 +1,47 @@
+{
+  "name": "leetcodelive",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "postscribe": "^2.0.8",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-hooks": "^1.0.1",
+    "react-hot-loader": "^4.13.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.0",
+    "socket.io": "^4.1.2",
+    "socket.io-client": "^4.1.2",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "nodemon server.js",
+    "hotstart": "react-scripts start",
+    "buildserver": "babel server.js --out-file server.compiled.js",
+    "build": "react-scripts build",
+    "bs": "react-scripts build && (nodemon server.js)",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
