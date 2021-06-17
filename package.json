@@ -18,7 +18,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "hotstart": "react-scripts start",
     "buildserver": "babel server.js --out-file server.compiled.js",
     "build": "react-scripts build",

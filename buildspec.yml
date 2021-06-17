@@ -1,0 +1,29 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14  
+    commands:
+      - echo Initiating build. 
+      - echo Stand by...
+  pre_build:
+    commands:
+      - echo Installing NPM dependencies...
+      - npm install
+      - echo NPM dependencies installed.
+  build:
+    commands:
+      - echo Building environment.
+      - npm run build
+      - echo environment ready.
+  post_build:
+    commands:
+      - echo Server starting.
+      - npm start
+      - echo Server started.
+artifacts:
+  files:
+    - build/*
+    - server.js
+    - package.json
