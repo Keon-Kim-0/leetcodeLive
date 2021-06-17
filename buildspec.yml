@@ -19,11 +19,10 @@ phases:
       - echo environment ready.
   post_build:
     commands:
-      - echo Server starting.
-      - npm start
-      - echo Server started.
+      - echo Build completed on `date`
 artifacts:
   files:
-    - build/*
+    - src/*
+    - public/*
     - server.js
     - package.json
