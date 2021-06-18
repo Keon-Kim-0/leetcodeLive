@@ -57,11 +57,11 @@ io.on('connection', sock => {
 });
 
 server.on('error', function (err) {
-  console.log('something got fucked', err);
+  console.log('Something went wrong. Error Message:', err);
 });
 
 server.listen(port, () => {
-  console.log('leet live started on ' + port);
+  console.log('LeetCodeLive started on ' + port);
 });
 ;
 

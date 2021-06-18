@@ -24,6 +24,5 @@ artifacts:
   files:
     - build/**/*
     - Procfile
-    - public/**/*
     - server.compiled.js
     - package.json
