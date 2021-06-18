@@ -9,7 +9,7 @@ phases:
       - echo Stand by...
   pre_build:
     commands:
-      - echo Installing NPM dependencies...
+      - echo %%%%%Installing NPM dependencies...
       - npm install
       - echo NPM dependencies installed.
   build:
@@ -22,7 +22,8 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - src/*
-    - public/*
-    - server.js
+    - build/**/*
+    - Procfile
+    - public/**/*
+    - server.compiled.js
     - package.json
