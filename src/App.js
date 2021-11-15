@@ -11,7 +11,7 @@ const App = () => {
 
     return (
         <div id='AppDiv'>
-            <h1>cicd test 2</h1>
+            <h1>cicd test 3</h1>
             <Home />
         </div>
     );
