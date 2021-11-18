@@ -3,11 +3,11 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 16  
+      nodejs: 12
     commands:
-      # install Node 16
-      - echo installing node 16..
-      - curl -fsSL https://deb.nodesource.com/setup_16.x | -E bash -
+      # install Node 12
+      - echo installing node 12..
+      - curl -fsSL https://deb.nodesource.com/setup_12.x | -E bash -
       - apt install -y nodejs
   pre_build:
     commands:
