@@ -3,17 +3,21 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 12  
+      nodejs: 16  
     commands:
-      - echo Initiating build. 
-      - echo Stand by...
+      # install Node 16
+      - echo installing node 16..
+      - curl -fsSL https://deb.nodesource.com/setup_16.x | -E bash -
+      - apt install -y nodejs
   pre_build:
     commands:
-      - echo %%%%%Installing NPM dependencies...
+      # install dependencies
+      - echo Installing NPM dependencies...
       - npm install
       - echo NPM dependencies installed.
   build:
     commands:
+      # build
       - echo Building environment.
       - npm run build
       - echo environment ready.
@@ -22,8 +26,6 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - build/**/*
-    - Procfile
-    - public/**/*
-    - server.compiled.js
-    - package.json
+    - "**/*"
+  discard-path: no
+  base-directory: build
